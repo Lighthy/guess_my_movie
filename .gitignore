@@ -5,6 +5,3 @@
 /process/wiki_movie_plots_deduped.csv
 /process/dataset_processed.csv
 /polls/static/data/*
-*
-/*
-!.gitignore
