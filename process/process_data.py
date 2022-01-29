@@ -115,7 +115,7 @@ if __name__ == '__main__':
     start = datetime.datetime.now()
     s = start
     print(f'Start at {datetime.datetime.now()}')
-    # df['Plot'] = df['Plot'].apply(lambda x: summarize(x))
+    df['Plot'] = df['Plot'].apply(lambda x: summarize(x))
     print(f'Summarized in {datetime.datetime.now() - s}')
     s = datetime.datetime.now()
     df['Plot'] = df['Plot'] + ' ' + df['Title']
@@ -126,7 +126,7 @@ if __name__ == '__main__':
     print(f'Key worded in {datetime.datetime.now() - s}')
 
     s = datetime.datetime.now()
-    # df['Plot_key_words'] = df['Plot_key_words'].apply(lambda x: abstract(x, 2, True))
+    df['Plot_key_words'] = df['Plot_key_words'].apply(lambda x: abstract(x, 2, True))
     print(f'Synseted in {datetime.datetime.now() - s}')
     s = datetime.datetime.now()
     df['Plot_vectors'] = df['Plot_key_words'].apply(lambda x: vectorize(nlp_en, x))
